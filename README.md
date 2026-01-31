@@ -1,11 +1,10 @@
 <a id="readme-top"></a>
 
 <!-- PROJECT LOGO -->
-(PIC OF LOGO)
 <br />
 <div align="center">
   <a href="https://github.com/iulian-b/fox-conky">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/logo.png" alt="Logo" width="640" height="640">
   </a>
 
   <h3 align="center">ƒøx-conky</h3>
@@ -16,12 +15,13 @@
 </div>
 
 <!-- TABLE OF CONTENTS -->
-<details>
+<details open>
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about">About</a></li>
     <li><a href="#requirements">Requirements</a></li>
     <li><a href="#installation">Installation</a></li>
+    <li><a href="#modules">Modules</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#special-thanks">Special Thanks</a></li>
   </ol>
@@ -107,6 +107,86 @@ Use the `BLANK_README.md` to get started.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- MODULES -->
+## Modules
+
+<details>
+  <summary>Clock</summary>
+  <ul>
+    <li>Clock (HH:MM)</li>
+    <li>Date (DD.MM.YYYY) | Time (d)</li>
+  </ul>
+</details>
+
+<details>
+  <summary>ID</summary>
+  <ul>
+    <li>user@hostname</li>
+    <li>Kernel | Architecture</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Weather</summary>
+  <ul>
+    <li><a href="https://wttr.in">wttr.in</a> forecasts</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Network</summary>
+  <ul>
+    <li>Network interface</li>
+    <li>Private IP</li>
+    <li>Public IP</li>
+    <li>Upload and Download | Speeds</li>
+    <li>Upload and Download | Total</li>
+    <li>Upload and Download | Graph</li>
+  </ul>
+</details>
+
+<details>
+  <summary>CPU</summary>
+  <ul>
+    <li>Name | Frequency</li>
+    <li>Core 01-24 graphs</li>
+    <li>Core 00 | Core 00 graph</li>
+    <li>Temp</li>
+    <li>CPU usage graph</li>
+  </ul>
+</details>
+
+<details>
+  <summary>GPU</summary>
+  <ul>
+    <li>Name | Frequency</li>
+    <li>Usage | Driver</li>
+    <li>Edge Temp | Fan RPM</li>
+    <li>Memory Temp | Memory Frequency</li>
+    <li>Junction Temp | Power Draw</li>
+    <li>Usage graph</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Storage</summary>
+  <ul>
+    <li>Internal disks partitions | Graph | Usage</li>
+    <li>External disks partitions | Graph | Usage</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Usage</summary>
+  <ul>
+    <li>Uptime</li>
+    <li>Memory Graph | Usage</li>
+    <li>Processes running | Load average</li>
+    <li>Top 3 running processes by CPU load</li>
+    <li>Top 3 running processes by Memory load</li>
+    <li>Top 3 running processes by I/O load</li>
+  </ul>
+</details>
 
 <!-- LICENSE -->
 ## License
