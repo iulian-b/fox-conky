@@ -37,7 +37,7 @@
   <img src="assets/demo.png" alt="ƒøx-conky running on a vertical side panel" width="640">
 </div>
 
-ƒøx-conky is a tall, single-column system monitor for [conky](https://github.com/brndnmtthws/conky), built to fill a vertical 1920px side screen. It  the [Causestppuccin](https://github.com/catppuccin/conky) palette (Teal, Peach, Maroon) and Nerd Font icons.
+ƒøx-conky is a tall, single-column system monitor for [conky](https://github.com/brndnmtthws/conky), built to fill a vertical 1920px side screen. It  the [Catppuccin](https://github.com/catppuccin/conky) palette (Teal, Peach, Maroon) and Nerd Font icons.
 
 V2 NEW: Most sections are now driven by small shell scripts that read live data from `sysfs`, `lsblk`, NetworkManager and MPRIS, which adapt the widget to the machine it runs on (instead of being hardcoded to mine).
 
@@ -47,8 +47,8 @@ V2 NEW: Most sections are now driven by small shell scripts that read live data 
 
   > [!NOTE]
   > Some of the data shown in this video is statically set (for example the public IP addresses), to avoid doxxing. On your machine every value is read live.
-
-  <video src="https://github.com/iulian-b/fox-conky/raw/main/assets/demo.mp4" controls muted width="100%"></video>
+  
+  <video src="https://github.com/user-attachments/assets/1651f91d-35e2-4cc3-bd05-1fc583dff7e6" controls muted width="100%"></video>
 
   If the video doesn't play above, [open `assets/demo.mp4` directly](assets/demo.mp4).
 </details>
