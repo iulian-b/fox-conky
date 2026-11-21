@@ -1,0 +1,5 @@
+# Raw OBS recordings used to build assets/demo.mp4
+assets/[1-5].mp4
+
+# Editor backups (demo.png~ may be the unblurred original)
+*~
