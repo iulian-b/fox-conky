@@ -16,30 +16,35 @@ line() {
 	[ -n "$3" ] && printf '%s %s: ${alignr}${color3}(%s)${color}\n' "$1" "$2" "$(printf '%s' "$3" | sed 's/\$/$$/g')"
 }
 
+# P-State Driver (AMD) / CPU Driver (Intel)
 if [ -r $cpu/amd_pstate/status ]; then
 	line '' 'P-State Driver' "$(cat $cpu/amd_pstate/status)"
 else
 	line '' 'CPU Driver' "$(cat $cpu/cpu0/cpufreq/scaling_driver 2>/dev/null)"
 fi
 
+# P-State EPP (AMD) / CPU Governor (Intel)
 if [ -r $cpu/cpu0/cpufreq/energy_performance_preference ]; then
 	line '' 'P-State EPP' "$(cat $cpu/cpu0/cpufreq/energy_performance_preference)"
 else
 	line '' 'CPU Governor' "$(cat $cpu/cpu0/cpufreq/scaling_governor 2>/dev/null)"
 fi
 
+# P-State Core Boost (AMD)
 boost=$(cat $cpu/cpufreq/boost 2>/dev/null || cat $cpu/cpufreq/policy0/boost 2>/dev/null)
 case $boost in 1) boost=on ;; 0) boost=off ;; esac
 line '' 'P-State Core Boost' "$boost"
 
+# 3D V-Cache Optimizer (AMD)
 for f in /sys/bus/platform/drivers/amd_x3d_vcache/*/amd_x3d_mode; do
 	[ -r "$f" ] && line '' '3D V-Cache Optimizer' "$(cat "$f")"
 done
 
-# Scheduler of the disk holding / (walks down through LUKS/LVM to the disk)
+# I/O Scheduler of the disk holding / (walks down through LUKS/LVM to the disk)
 root=$(findmnt -n -o SOURCE / | sed 's/\[.*//')
 disk=$(lsblk -srno NAME,TYPE "$root" 2>/dev/null | awk '$2 == "disk" { print $1; exit }')
 sched=$(sed -n 's/.*\[\(.*\)\].*/\1/p' "/sys/block/$disk/queue/scheduler" 2>/dev/null)
 line '󰋊' 'I/O Scheduler' "$sched"
 
+# Active GPU Profile (name taken from LACT)
 command -v lact >/dev/null && line '' 'GPU Profile' "$(lact cli profile 2>/dev/null)"
